@@ -308,6 +308,21 @@ header .header-body img
     color:#fff;
     border: 1px solid #bec1c2;
 }
+.step-content ol
+{
+    padding: 20px 0;
+    max-width: 800px;
+    margin: auto;
+}
+.step-content ol li
+{
+    line-height: 2.0;
+}
+.step-content .video video
+{
+    max-width: 100%;
+    height: auto;
+}
 /*step block*/
 
 /*reviews*/
