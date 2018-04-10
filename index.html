@@ -16,14 +16,22 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- vendor -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+    <link href="vendor/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+    <!-- main -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/animate.css">
     <!-- js -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/youtube.js"></script>
     <script src="js/custom.js"></script>
 </head>
 <body>
@@ -174,11 +182,13 @@
             <div class="step-buttons">
                 <div class="form-group mobile-step">
                     <p>Укажите какой шаг вас интересует ?<p>
-                    <select class="form-control" id="sel1">
-                        <option selected>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+                    <select class="form-control" id="mobile-select">
+                        <option value="step-1" selected>Заяка на сайте</option>
+                        <option value="step-2">Определи свой уровень квалификации</option>
+                        <option value="step-3">К чему быть готовым в день экзамена?</option>
+                        <option value="step-4">Результаты экзамена</option>
+                        <option value="step-5">Получить свидетельство</option>
+                        <option value="step-6">Найти себя в госреестре</option>
                     </select>
                 </div>
                 <div class="pc-step">
@@ -191,46 +201,177 @@
                 </div>
             </div>
             <div class="step-content">
-                <div class="container">
-                <div class="step-1" style="display: none">
+                <div class="container step-block-content">
+                    <div class="step-1" style="display: block">
                 <h2>Заяка на сайте</h2>
                 <p>Вам необходимо подать заявку на сайте по следующие ссылки  либо лично посетить наш офис</p>
                 <hr>
                 <p>На самом деле достаточно нажать на кнопку получить квалификацию и мы проведем вас самыми короткими путями и не позволим заблудиться.</p>
                 <a href="#" class="btn-send">Подтвердить квалификацию</a>
                 </div>
-                <div class="step-2">
+                    <div class="step-2" style="display: none">
                     <h2>Определи свой уровень квалификации</h2>
                     <p>в этом тебе помогут видео, ролики которые мы сняли специально для тебя!</p>
                     <div class="video">
-                    <div class="row">
-                        <div class="col-md-2 offset-md-1">
-                            <video controls="true" >
-                              <source src="www.youtube.com/watch?v=3bGNuRtlqAQ" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="col-md-2">
-                            <video>
-                                <source src="https://www.youtube.com/embed/wM7K7Vpw1yk">
-                            </video>
-                        </div>
-                        <div class="col-md-2">
-                            <video>
-                                <source src="https://www.youtube.com/embed/wM7K7Vpw1yk">
-                            </video>
-                        </div>
-                        <div class="col-md-2">
-                            <video>
-                            <source src="https://www.youtube.com/embed/wM7K7Vpw1yk">
-                            </video>
-                        </div>
-                        <div class="col-md-2">
-                            <video>
-                                <source src="https://www.youtube.com/embed/wM7K7Vpw1yk">
-                            </video>
-                        </div>
-                        </div>
-                    </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="revolutionSliderMediasContainer" class="rev_slider_wrapper mb-none mt-xl">
+                                        <div id="revolutionSliderMedias" class="rev_slider" data-version="">
+                                            <ul>
+                                                <li data-index="rs-105" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg" data-rotate="0" data-saveperformance="off"  data-title="1 категория" data-param1="Парикмахеры" data-description="">
+                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                                         id="slide-107-layer-1"
+                                                         data-x="0"
+                                                         data-y="0"
+                                                         data-width="['auto']"
+                                                         data-height="['auto']"
+                                                         data-transform_idle="o:1;"
+                                                         data-transform_in="s:1000;e:Power1.easeInOut;"
+                                                         data-transform_out="s:1000;s:1000;"
+                                                         data-start="1000"
+                                                         data-responsive_offset="on"
+                                                         data-ytid="oNBBijn4JuY"
+                                                         data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&ref=0;;origin=http://server.local;"
+                                                         data-videorate="1"
+                                                         data-videowidth="100%"
+                                                         data-videoheight="100%"
+                                                         data-videocontrols="controls"
+                                                         data-videoloop="none"
+                                                         data-forceCover="1"
+                                                         data-aspectratio="16:9"
+                                                         data-autoplay="on"
+                                                         data-nextslideatend="true"
+                                                         data-volume="100"
+                                                         data-forcerewind="on"
+                                                         style="z-index: 5;">
+                                                    </div>
+                                                </li>
+                                                <li data-index="rs-106" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/youtube-1.jpg"  data-rotate="0"  data-saveperformance="off" data-title="2 категория" data-param1="Парикмахеры" data-description="">
+                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                                                    <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                                         id="slide-107-layer-2"
+                                                         data-x="0"
+                                                         data-y="0"
+                                                         data-width="['auto']"
+                                                         data-height="['auto']"
+                                                         data-transform_idle="o:1;"
+                                                         data-transform_in="s:1000;e:Power1.easeInOut;"
+                                                         data-transform_out="s:1000;s:1000;"
+                                                         data-start="1000"
+                                                         data-responsive_offset="on"
+                                                         data-ytid="oNBBijn4JuY"
+                                                         data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&ref=0;;origin=http://server.local;"
+                                                         data-videorate="1"
+                                                         data-videowidth="100%"
+                                                         data-videoheight="100%"
+                                                         data-videocontrols="controls"
+                                                         data-videoloop="none"
+                                                         data-forceCover="1"
+                                                         data-aspectratio="16:9"
+                                                         data-autoplay="on"
+                                                         data-nextslideatend="true"
+                                                         data-volume="100"
+                                                         data-forcerewind="on"
+                                                         style="z-index: 5;">
+                                                    </div>
+                                                </li>
+                                                <li data-index="rs-108" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="3 категория" data-param1="Парикмахеры" data-description="">
+                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                                                    <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                                         id="slide-107-layer-3"
+                                                         data-x="0"
+                                                         data-y="0"
+                                                         data-width="['auto']"
+                                                         data-height="['auto']"
+                                                         data-transform_idle="o:1;"
+                                                         data-transform_in="s:1000;e:Power1.easeInOut;"
+                                                         data-transform_out="s:1000;s:1000;"
+                                                         data-start="1000"
+                                                         data-responsive_offset="on"
+                                                         data-ytid="oNBBijn4JuY"
+                                                         data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&ref=0;;origin=http://server.local;"
+                                                         data-videorate="1"
+                                                         data-videowidth="100%"
+                                                         data-videoheight="100%"
+                                                         data-videocontrols="controls"
+                                                         data-videoloop="none"
+                                                         data-forceCover="1"
+                                                         data-aspectratio="16:9"
+                                                         data-autoplay="on"
+                                                         data-nextslideatend="true"
+                                                         data-volume="100"
+                                                         data-forcerewind="on"
+                                                         style="z-index: 5;">
+                                                    </div>
+                                                </li>
+                                                <li data-index="rs-109" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="4 категория" data-param1="Парикмахеры" data-description="">
+                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                                                    <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                                         id="slide-107-layer-4"
+                                                         data-x="0"
+                                                         data-y="0"
+                                                         data-width="['auto']"
+                                                         data-height="['auto']"
+                                                         data-transform_idle="o:1;"
+                                                         data-transform_in="s:1000;e:Power1.easeInOut;"
+                                                         data-transform_out="s:1000;s:1000;"
+                                                         data-start="1000"
+                                                         data-responsive_offset="on"
+                                                         data-ytid="oNBBijn4JuY"
+                                                         data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&ref=0;;origin=http://server.local;"
+                                                         data-videorate="1"
+                                                         data-videowidth="100%"
+                                                         data-videoheight="100%"
+                                                         data-videocontrols="controls"
+                                                         data-videoloop="none"
+                                                         data-forceCover="1"
+                                                         data-aspectratio="16:9"
+                                                         data-autoplay="on"
+                                                         data-nextslideatend="true"
+                                                         data-volume="100"
+                                                         data-forcerewind="on"
+                                                         style="z-index: 5;">
+                                                    </div>
+                                                </li>
+                                                <li data-index="rs-110" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="5 категория" data-param1="Парикмахеры" data-description="">
+                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                                                    <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
+                                                         id="slide-107-layer-5"
+                                                         data-x="0"
+                                                         data-y="0"
+                                                         data-width="['auto']"
+                                                         data-height="['auto']"
+                                                         data-transform_idle="o:1;"
+                                                         data-transform_in="s:1000;e:Power1.easeInOut;"
+                                                         data-transform_out="s:1000;s:1000;"
+                                                         data-start="1000"
+                                                         data-responsive_offset="on"
+                                                         data-ytid="oNBBijn4JuY"
+                                                         data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&ref=0;;origin=http://server.local;"
+                                                         data-videorate="1"
+                                                         data-videowidth="100%"
+                                                         data-videoheight="100%"
+                                                         data-videocontrols="controls"
+                                                         data-videoloop="none"
+                                                         data-forceCover="1"
+                                                         data-aspectratio="16:9"
+                                                         data-autoplay="on"
+                                                         data-nextslideatend="true"
+                                                         data-volume="100"
+                                                         data-forcerewind="on"
+                                                         style="z-index: 5;">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <hr>
                     <h2>Перечень документов</h2>
@@ -242,8 +383,134 @@
                     </ol>
                     <a href="#" class="btn-send">Подтвердить квалификацию</a>
                 </div>
+                    <div class="step-3" style="display: none">
+                        <h2>К чему быть готовым в день экзамена?</h2>
+                        <p>Тебя будут ждать 2 типа экзаменов</p>
+                        <hr>
+                        <h2>Теоретический экзамен</h2>
+                        <p>В экзамене будет 4 типа вопросов. Мы покажем тебе примеры, чтобы ты был готов.</p>
+                        <p>Колличество вопросов - <b>40</b>. Время на выполнение - <b>80</b> мин.</p>
+                        <p><b>Чтобы пройти к практическому экзамену необходимо набрать минимум 28/48 баллов!</b></p>
+                        <div class="row step-question-block">
+                            <div class="col-12 col-sm-6 col-md-3 padding">
+                                <div class="question">
+                                    <div class="question-number">1</div>
+                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 padding">
+                                <div class="question">
+                                    <div class="question-number">2</div>
+                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 padding">
+                                <div class="question">
+                                    <div class="question-number">3</div>
+                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 padding">
+                                <div class="question">
+                                    <div class="question-number">4</div>
+                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                </div>
+                            </div>
+                        </div>
+                   <hr>
+                   <h2>Практический экзамен</h2>
+                   <p>У нас нет оценок,а есть оценочный лист. Для каждой категории он свой.</p>
+                   <p>Ты можешь посмотреть основные критерии, что бы быть готовым.</p>
+                   <p><b>Чтобы пройти экзамен,тебе нужно выполнить все критерии</b></p>
+                   <ol>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                       <li>text text text text text text text text text text text text text text text text text text text text text text</li>
+                   </ol>
+                   <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                  </div>
+                    <div class="step-4" style="display: none">
+                        <h2>Результаты экзамена</h2>
+                        <p>Ты можешь получить результаты по почте или в центре оценки квалификации.</p>
+                        <hr>
+                        <h2>Если экзамен не сдан?</h2>
+                        <p>Ты получишь заключение с рекомендациями, в которых будет описано что тебе нужно подучить.</p>
+                        <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                    </div>
+                    <div class="step-5" style="display: none">
+                        <h2>Получи свое свидетельство</h2>
+                        <div class="certificate">
+                            <a href="images/certificate.jpg" data-lightbox="certificate">
+                            <img src="images/certificate.jpg" alt="Сертификат">
+                            </a>
+                        </div>
+                        <hr>
+                        <h2>Счастливчики, сдавшие экзамен</h2>
+                        <div class="photo-carousel">
+                        <div class="row">
+                            <div class="col-12 columns">
+                                <div class="photo owl-carousel owl-theme">
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="1">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="2">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="3">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="4">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="5">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="images/blog-post-carousel-2.jpg"  data-lightbox="6">
+                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        </a>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                            </div>
+                    <div class="step-6" style="display: none">
+                        <h2>Поздравляю! теперь ты можешь найти себя в госреестре</h2>
+                        <p>тебе необходимо ввести № твоего свидетельства и дату выдачи</p>
+                        <form action="https://nok-nark.ru/cert/list/" method="get" target="_blank" class="registry-form">
+                            <div class="from-group">
+                                <input type="text" name="filter[CODE]" class="form-control" placeholder='Введите "Регистрационный номер"' required>
+                            </div>
+                            <div class="from-group">
+                                <input type="date" name="filter[PROPERTY_DATE]" class="form-control" required>
+                            </div>
+                            <div class="from-group">
+                                <button type="submit" class="btn-submit">Поиск</button>
+                            </div>
+                        </form>
+                        <hr>
+                        <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                    </div>
+                    </div>
                 </div>
-            </div>
+                </div>
+
+
 
             <div class="step-buttons-bottom">
                 <a id="step-1" href="#" class="btn-bottom active"><img src="images/icons/step.png"></a>
@@ -253,8 +520,7 @@
                 <a id="step-5" href="#" class="btn-bottom"><img src="images/icons/step-5.png"></a>
                 <a id="step-6" href="#" class="btn-bottom noArrow"><img src="images/icons/step-6.png"></a>
             </div>
-        </div>
-
+    </div>
 
 
 
@@ -311,6 +577,7 @@
 
     </div>
     </div>
+
     </section>
     <section>
         <div class="question-block">
@@ -354,5 +621,14 @@
         </div>
     </footer>
 </div>
+<!-- Vendor -->
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!-- Current Page Vendor and Views -->
+<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendor/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="vendor/lightbox2-master/dist/js/lightbox.js"></script>
+<!-- Video -->
+<script src="js/video.js.js"></script>
 </body>
 </html>
