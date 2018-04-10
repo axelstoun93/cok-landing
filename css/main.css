@@ -203,7 +203,7 @@ header .header-body img
     border: none;
 }
 
-.btn {
+.step-block .btn {
     position: relative;
     display: inline-block;
     background-color: #9bbacd;
@@ -219,7 +219,7 @@ header .header-body img
     -moz-box-shadow: 0 2px 14px rgba(1,1,1,0.05);
     box-shadow: 0 2px 14px rgba(1,1,1,0.05);
 }
-.btn::after {
+.step-block  .btn::after {
     content: '';
     position: absolute;
     top: .85em;
@@ -586,4 +586,97 @@ footer
 .footer-copyright .social-icons li a:hover {
    background: #025282;
     color: #fff;
+}
+
+/* modal style */
+.modal-content
+{
+    background: none;
+    border: none;
+}
+.modal-content .close
+{
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    padding: 20px 0;
+    background: url(../images/close.png) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    z-index: 2000;
+}
+.modal-dialog
+{
+    font-family:"Century Gothic";
+
+}
+.modal-body
+{
+    background: #f3f3f3;
+}
+.modal-title
+{
+    padding: 10px 0;
+}
+.modal-footer
+{
+    background: #f3f3f3;
+}
+.modal-footer button
+{
+    margin: auto;
+}
+.modal-form .btn-submit
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: none;
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+    background: #9bbacd;
+}
+.modal-form .btn-submit:hover
+{
+    cursor: pointer;
+    background: #12638a;
+    background: linear-gradient(to top, #025282, #75ecc4);
+    border: none;
+}
+.modal-footer button
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: none;
+    text-transform: uppercase;
+    margin: auto;
+    background: #9bbacd;
+}
+.modal-footer button:hover
+{
+    cursor: pointer;
+    background: #12638a;
+    background: linear-gradient(to top, #025282, #75ecc4);
+    border: none;
+}
+.modal-form .form-control
+{
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    padding: 15px 25px;
+    background: #c1d5e0;
 }

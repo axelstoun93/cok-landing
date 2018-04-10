@@ -207,7 +207,7 @@
                 <p>Вам необходимо подать заявку на сайте по следующие ссылки  либо лично посетить наш офис</p>
                 <hr>
                 <p>На самом деле достаточно нажать на кнопку получить квалификацию и мы проведем вас самыми короткими путями и не позволим заблудиться.</p>
-                <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                 </div>
                     <div class="step-2" style="display: none">
                     <h2>Определи свой уровень квалификации</h2>
@@ -249,7 +249,6 @@
                                                 </li>
                                                 <li data-index="rs-106" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/youtube-1.jpg"  data-rotate="0"  data-saveperformance="off" data-title="2 категория" data-param1="Парикмахеры" data-description="">
                                                     <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-2"
                                                          data-x="0"
@@ -381,7 +380,7 @@
                         <li>Копию документа о профессиональном образовании или обучении по профилю подтверждаемой квалификации, копию свидетельства о браке (если фамилия в дипломе не совпадает с фамилией в паспорте)</li>
                         <li>копию личной медицинской книжки</li>
                     </ol>
-                    <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                        <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                 </div>
                     <div class="step-3" style="display: none">
                         <h2>К чему быть готовым в день экзамена?</h2>
@@ -430,7 +429,7 @@
                        <li>text text text text text text text text text text text text text text text text text text text text text text</li>
                        <li>text text text text text text text text text text text text text text text text text text text text text text</li>
                    </ol>
-                   <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                        <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                   </div>
                     <div class="step-4" style="display: none">
                         <h2>Результаты экзамена</h2>
@@ -438,7 +437,7 @@
                         <hr>
                         <h2>Если экзамен не сдан?</h2>
                         <p>Ты получишь заключение с рекомендациями, в которых будет описано что тебе нужно подучить.</p>
-                        <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                        <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                     </div>
                     <div class="step-5" style="display: none">
                         <h2>Получи свое свидетельство</h2>
@@ -487,7 +486,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                        <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                             </div>
                     <div class="step-6" style="display: none">
                         <h2>Поздравляю! теперь ты можешь найти себя в госреестре</h2>
@@ -504,7 +503,7 @@
                             </div>
                         </form>
                         <hr>
-                        <a href="#" class="btn-send">Подтвердить квалификацию</a>
+                        <a href="#" class="btn-send" data-toggle="modal" data-target="#call-back">Подтвердить квалификацию</a>
                     </div>
                     </div>
                 </div>
@@ -620,6 +619,37 @@
         </div>
         </div>
     </footer>
+
+
+
+
+    <div class="modal fade" id="call-back" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="defaultModalLabel">Форма обратной связи</h4>
+                    <form action="/" class="modal-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="ФИО:" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Ваш E-mail:" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Телефон:" name="phone">
+                        </div>
+                        <button type="submit" class="btn-submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 <!-- Vendor -->
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
