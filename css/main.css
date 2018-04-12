@@ -589,6 +589,30 @@ footer
 }
 
 /* modal style */
+.white-popup {
+    position: relative;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.white-popup button.mfp-close
+{
+
+    overflow: visible;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: 0;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+    touch-action: manipulation;
+}
+
 .modal-content
 {
     background: none;
@@ -653,30 +677,17 @@ footer
     background: linear-gradient(to top, #025282, #75ecc4);
     border: none;
 }
-.modal-footer button
-{
-    position: relative;
-    display: inline-block;
-    padding: 10px 40px;
-    border-radius: 50px;
-    border: 1px solid #fff;
-    color: #fff;
-    background: none;
-    text-transform: uppercase;
-    margin: auto;
-    background: #9bbacd;
-}
-.modal-footer button:hover
-{
-    cursor: pointer;
-    background: #12638a;
-    background: linear-gradient(to top, #025282, #75ecc4);
-    border: none;
-}
+
 .modal-form .form-control
 {
     margin-bottom: 1.5rem;
     border-radius: 10px;
     padding: 15px 25px;
     background: #c1d5e0;
+}
+.white-popup hr
+{
+    width: 215px;
+    border: 5px solid rgba(155, 186, 205, 1.0);
+    border-radius: 3px;
 }

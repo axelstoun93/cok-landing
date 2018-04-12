@@ -1,6 +1,11 @@
 (function () {
     $( document ).ready(function () {
-      
+
+
+        $('.choice').scroll(function(){
+            alert('Элемент foo был прокручен... скроллирован... ну как там это называется то?!');
+        });
+
         addReviewsController();
         //Добовляем кнопки управления к комментам на динамике 
         function addReviewsController() {
@@ -33,7 +38,7 @@
 
         //Функция смены шагов
         selectBottomStep();
-        selectBottomStepMobile()
+        selectBottomStepMobile();
         function selectBottomStepMobile() {
             $("#mobile-select").change(function(){
                 showHideBlock($(this).val())
@@ -103,6 +108,87 @@
                 }
             }
         }
+
+        // Функции отображения  модельного окна вопросов
+        clickQuestionBottoms();
+        function clickQuestionBottoms() {
+            $('.question').click(function () {
+                // Получаем id по которому будем искать нужный div блок и отоброжать его
+                var Class = $(this).children('.question-number').attr('id');
+                showHideQuestions(Class);
+                var el = $('#examples-of-questions');
+                if (el.length) {
+                    $.magnificPopup.open({
+                        items: {
+                            src: el
+                        },
+                        type: 'inline',
+                        showCloseBtn: false
+                    });
+                }
+            });
+            $('#white-popup-close').click(function () {
+                $.magnificPopup.close();
+            })
+        }
+
+        // Функции отображения  блоков с вопросами
+        function showHideQuestions(name) {
+            //Имя класса который нужно отобразить
+            var className = name;
+            //подсчитывае все блоки чтобы пройтись циклом и скрыть не нужные
+            var allBlock = $('.answer-block > div');
+            var countBlock = allBlock.length;
+            for(var i = 0 ; countBlock > i ; i++)
+            {
+                //Эказатель на текущем элементе
+                var currentClass = allBlock[i];
+                //Имя текущего клаcса
+                var currentClassName = $(currentClass).attr('class');
+                if(currentClassName == className)
+                {
+                    //Если полученное имя совподает с классам текущего элемента то отображаем
+                    $(currentClass).show();
+                }else
+                {
+                    //Если име не совподает то скрываем элемент
+                    $(currentClass).hide()
+                }
+               console.log(allBlock[i])
+            }
+        }
+
+
+        choiceAnimate();
+
+        function choiceAnimate() {
+
+            var choiseBlock = $('.choice');
+            var choiseBlockCordinate = choiseBlock.offset().top;
+            var animateBlock = $('.choice-animate-block > div');
+            $(window).on("scroll", function() {
+                if($(window).scrollTop() >= choiseBlockCordinate)
+                {
+                    $.each(animateBlock, function(i, div) {
+                        setTimeout(function() {
+                            $(div).addClass("swing animated");
+                        }, 2000 + (i * 3500));
+
+                    });
+                }
+            });
+        }
+
+
+
+
+
+
+
+
+
+        
+
 
     })
 })();
