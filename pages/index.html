@@ -14,25 +14,25 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Css -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/animate.css">
     <!-- vendor -->
-    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
-    <link href="vendor/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/layers.css">
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/navigation.css">
+    <link rel="stylesheet" href="../vendor/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../vendor/rs-plugin/css/navigation.css">
+    <link href="../vendor/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
     <!-- main -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/media.css">
     <!-- js -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom.js"></script>
 </head>
 <body>
 <div class="body">
@@ -42,7 +42,7 @@
                 <div class="row mobile-head-vertical">
                     <div class="col-xs-12 col-sm-3 col-md-3 vcenter">
                         <div class="mobile-logo">
-                            <img src="images/logo.png">
+                            <img src="../images/logo.png">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8 vcenter">
@@ -53,7 +53,7 @@
                 </div>
         </div>
         <div class="head-banner">
-            <img src="images/header.jpg">
+            <img src="../images/header.jpg">
         </div>
     </div>
 </header>
@@ -62,21 +62,21 @@
       <div class="container-fluid">
           <div class="row choice-animate-block">
               <!-- Single Special Area -->
-              <div class="col-xs-12  col-sm-6  col-md-4 offset-md-2 ">
+              <div class="col-xs-12  col-sm-6  col-md-4 offset-md-2" id="specialty_specialists">
                   <div class="choice-block text-center">
                       <h4>Для специалистов</h4>
                       <div class="single-icon">
-                          <img src="images/icons/specialist.png">
+                          <img src="../images/icons/specialist.png">
                       </div>
                       <!--<p></p>-->
                   </div>
               </div>
               <!-- Single Special Area -->
-              <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="col-xs-12 col-sm-6 col-md-4" id="specialty_employer">
                   <div class="choice-block text-center">
                       <h4>Для работодателей</h4>
                       <div class="single-icon">
-                          <img src="images/icons/employer.png">
+                          <img src="../images/icons/employer.png">
                       </div>
                       <!--<p></p>-->
                   </div>
@@ -86,65 +86,64 @@
       </div>
   </div>
 </section>
-    <section id="dynamic" style="display: none">
-        <div class="specialty">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                    <h2>Ваша специальность ?</h2>
-                    <hr>
+<section class="specialty" style="display: none;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2>Ваша специальность ?</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="specialty-col specialty-padding" id="hairdresser">
+                <div class="specialty-block text-center">
+                    <div class="specialty-icon">
+                        <img src="images/icons/hairdresser.png">
                     </div>
+                    <p>Парикмахер</p>
                 </div>
-                <div class="row">
-                    <div class="specialty-col specialty-padding" data-specialty="hairdresser">
-                        <div class="specialty-block text-center">
-                            <div class="specialty-icon">
-                                <img src="images/icons/hairdresser.png">
-                            </div>
-                            <p>Парикмахер</p>
-                        </div>
-                    </div>
+            </div>
 
-                    <div class="specialty-col specialty-padding" data-specialty="manicure">
-                        <div class="specialty-block text-center">
-                            <div class="specialty-icon">
-                                <img src="images/icons/manicure.png">
-                            </div>
-                            <p>Мастер маникюра</p>
-                        </div>
+            <div class="specialty-col specialty-padding" id="manicure">
+                <div class="specialty-block text-center disable">
+                    <div class="specialty-icon">
+                        <img src="images/icons/manicure.png">
                     </div>
+                    <p>Мастер маникюра</p>
+                </div>
+            </div>
 
-                    <div class="specialty-col specialty-padding" data-specialty="visagiste">
-                        <div class="specialty-block text-center">
-                            <div class="specialty-icon">
-                                <img src="images/icons/visagiste.png">
-                            </div>
-                            <p>Визажист</p>
-                        </div>
+            <div class="specialty-col specialty-padding" id="visagiste">
+                <div class="specialty-block text-center disable">
+                    <div class="specialty-icon">
+                        <img src="images/icons/visagiste.png">
                     </div>
+                    <p>Визажист</p>
+                </div>
+            </div>
 
-                    <div class="specialty-col specialty-padding" data-specialty="cosmetologist">
-                        <div class="specialty-block text-center">
-                            <div class="specialty-icon">
-                                <img src="images/icons/cosmetologist.png">
-                            </div>
-                            <p>Косметолог</p>
-                        </div>
+            <div class="specialty-col specialty-padding" id="cosmetologist">
+                <div class="specialty-block text-center disable">
+                    <div class="specialty-icon">
+                        <img src="images/icons/cosmetologist.png">
                     </div>
+                    <p>Косметолог</p>
+                </div>
+            </div>
 
-                    <div class="specialty-col specialty-padding" data-specialty="tailor">
-                        <div class="specialty-block text-center">
-                            <div class="specialty-icon">
-                                <img src="images/icons/tailor.png">
-                            </div>
-                            <p>Портной</p>
-                        </div>
+            <div class="specialty-col specialty-padding" id="tailor">
+                <div class="specialty-block text-center disable">
+                    <div class="specialty-icon">
+                        <img src="images/icons/tailor.png">
                     </div>
+                    <p>Портной</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-
+    <section id="dynamic" style="display: none">
     <div class="text-block">
         <div class="container-fluid">
           <div class="row">
@@ -218,7 +217,7 @@
                                         <div id="revolutionSliderMedias" class="rev_slider" data-version="">
                                             <ul>
                                                 <li data-index="rs-105" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg" data-rotate="0" data-saveperformance="off"  data-title="1 категория" data-param1="Парикмахеры" data-description="">
-                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <img src="../images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-1"
                                                          data-x="0"
@@ -247,7 +246,7 @@
                                                     </div>
                                                 </li>
                                                 <li data-index="rs-106" data-transition="fade" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/youtube-1.jpg"  data-rotate="0"  data-saveperformance="off" data-title="2 категория" data-param1="Парикмахеры" data-description="">
-                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <img src="../images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-2"
                                                          data-x="0"
@@ -276,7 +275,7 @@
                                                     </div>
                                                 </li>
                                                 <li data-index="rs-108" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="3 категория" data-param1="Парикмахеры" data-description="">
-                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <img src="../images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-3"
@@ -306,7 +305,7 @@
                                                     </div>
                                                 </li>
                                                 <li data-index="rs-109" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="4 категория" data-param1="Парикмахеры" data-description="">
-                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <img src="../images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-4"
@@ -336,7 +335,7 @@
                                                     </div>
                                                 </li>
                                                 <li data-index="rs-110" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="images/youtube-1.jpg"  data-rotate="0" data-saveperformance="off" data-title="5 категория" data-param1="Парикмахеры" data-description="">
-                                                    <img src="images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                                    <img src="../images/blank.gif" alt="" data-lazyload="images/youtube-1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 
                                                     <div class="tp-caption tp-resizeme fullscreenvideo tp-videolayer"
                                                          id="slide-107-layer-5"
@@ -373,7 +372,7 @@
                     </div>
                     <hr>
                     <h2>Перечень документов</h2>
-                    <ol style="text-align: left;margin: auto;max-width: 900px">
+                    <ol >
                         <li>Заявление в установленной форме</li>
                         <li>Копию паспорта или иного документа,удостоверяющего личность</li>
                         <li>Копию документа о профессиональном образовании или обучении по профилю подтверждаемой квалификации, копию свидетельства о браке (если фамилия в дипломе не совпадает с фамилией в паспорте)</li>
@@ -452,33 +451,33 @@
                             <div class="col-12 columns">
                                 <div class="photo owl-carousel owl-theme">
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="1">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="1">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="2">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="2">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="3">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="3">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="4">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="4">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg" data-lightbox="5">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="5">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="images/blog-post-carousel-2.jpg"  data-lightbox="6">
-                                            <img src="images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
+                                        <a href="../images/blog-post-carousel-2.jpg" data-lightbox="6">
+                                            <img src="../images/blog-post-carousel-2.jpg" alt="" class="img-responsive" />
                                         </a>
                                     </div>
                                 </div>
@@ -511,12 +510,12 @@
 
 
             <div class="step-buttons-bottom">
-                <a id="step-1" href="#" class="btn-bottom active"><img src="images/icons/step.png"></a>
-                <a id="step-2" href="#" class="btn-bottom"><img src="images/icons/step-2.png"></a>
-                <a id="step-3" href="#" class="btn-bottom"><img src="images/icons/step-3.png"></a>
-                <a id="step-4" href="#" class="btn-bottom"><img src="images/icons/step-4.png"></a>
-                <a id="step-5" href="#" class="btn-bottom"><img src="images/icons/step-5.png"></a>
-                <a id="step-6" href="#" class="btn-bottom noArrow"><img src="images/icons/step-6.png"></a>
+                <a id="step-1" href="#" class="btn-bottom active"><img src="../images/icons/step.png"></a>
+                <a id="step-2" href="#" class="btn-bottom"><img src="../images/icons/step-2.png"></a>
+                <a id="step-3" href="#" class="btn-bottom"><img src="../images/icons/step-3.png"></a>
+                <a id="step-4" href="#" class="btn-bottom"><img src="../images/icons/step-4.png"></a>
+                <a id="step-5" href="#" class="btn-bottom"><img src="../images/icons/step-5.png"></a>
+                <a id="step-6" href="#" class="btn-bottom noArrow"><img src="../images/icons/step-6.png"></a>
             </div>
     </div>
 
@@ -537,7 +536,7 @@
                     <div class="carousel-item active">
                         <div class="comment-content">
                         <div class="images">
-                            <img src="images/comments/stub.jpg">
+                            <img src="../images/comments/stub.jpg">
                         </div>
                         <div class="title">Петрова Яна</div>
                         <div class="comment">
@@ -549,7 +548,7 @@
                     <div class="carousel-item">
                         <div class="comment-content">
                         <div class="images">
-                            <img src="images/comments/stub.jpg">
+                            <img src="../images/comments/stub.jpg">
                         </div>
                         <div class="title">Петрова Яна</div>
                         <div class="comment">
@@ -560,7 +559,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="comment-content">
-                        <div class="images"><img src="images/comments/stub.jpg"></div>
+                        <div class="images"><img src="../images/comments/stub.jpg"></div>
                         <div class="title">Петрова Яна</div>
                         <div class="comment">
                             Infinite Shine. Хочу поблагодарить весь коллектив, который помогает мастерам быть "на высоте". Я долго ждала вот этот серый цвет и когда дождалась, поняла, что этот оттенок возглавит мою коллекцию :)
@@ -683,13 +682,11 @@
 
 </div>
 <!-- Vendor -->
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <!-- Current Page Vendor and Views -->
-<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<script src="vendor/owl.carousel/dist/owl.carousel.min.js"></script>
-<script src="vendor/lightbox2-master/dist/js/lightbox.js"></script>
-<!-- Video -->
-<script src="js/video.js.js"></script>
+<script src="../vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="../vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../vendor/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../vendor/lightbox2-master/dist/js/lightbox.js"></script>
 </body>
 </html>

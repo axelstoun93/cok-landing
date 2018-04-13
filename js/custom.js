@@ -1,194 +1,72 @@
 (function () {
     $( document ).ready(function () {
-
-
-        $('.choice').scroll(function(){
-            alert('Элемент foo был прокручен... скроллирован... ну как там это называется то?!');
-        });
-
-        addReviewsController();
-        //Добовляем кнопки управления к комментам на динамике 
-        function addReviewsController() {
-            var CommentCount =  $(".reviews .carousel-item").length;
-            for (var i = 0; CommentCount > i; ++i)
-            {
-                if(i == 0)
+        hoverAnimate();
+        function hoverAnimate() {
+            var choiceBlocks = $('.choice-block');
+            var animateBlock = $('.single-icon');
+            $(choiceBlocks).hover(function() {
+                if($(this).children('div').hasClass('pulse animated'))
                 {
-                    $('#reviews-controller').append('<li data-target="#reviewsIndicators" data-slide-to="'+i+'" class="active"></li>');
+                    $(this).children('div').removeClass('pulse animated');
                 }else
-                {
-                    $('#reviews-controller').append('<li data-target="#reviewsIndicators" data-slide-to="'+i+'"></li>');
-                }
-                
-            }
-        }
-
-        //Активируем фото-карусель
-        $('.photo').owlCarousel({
-            center: true,
-            items:2,
-            loop:true,
-            margin:10,
-            responsive:{
-                600:{
-                    items:4
-                }
-            }
+                    {
+                        $(this).children('div').addClass('pulse animated');
+                    }
         });
-
-        //Функция смены шагов
-        selectBottomStep();
-        selectBottomStepMobile();
-        function selectBottomStepMobile() {
-            $("#mobile-select").change(function(){
-                showHideBlock($(this).val())
-            });
+            // Определяем была анимация или нет если была то больше не запускаем
         }
-        function selectBottomStep() {
-            var select = $(".pc-step a");
-            var selectBottom = $('.step-buttons-bottom a');
-            select.click(function (e) {
-                e.preventDefault();
-                var bottomCount =  select.length;
-                var step = $(this).attr('id');
-                for(var i = 0; bottomCount > i;i++)
-                {
-                    if($(select[i]).attr('id') == step)
-                    {
-                        $(select[i]).addClass("active");
-                        $(selectBottom [i]).addClass("active");
-                        showHideBlock(step);
-                    }else
-                    {
-                        if($(select[i]).hasClass("active"))
-                        {
-                            $(select[i]).removeClass("active");
-                            $(selectBottom[i]).removeClass("active");
+        //Работодатель или специалист ?
+        choiceSelect();
+        function choiceSelect() {
+            var choiceBlock = $('.choice-block');
+            var pageName = false;
+            var specialtyBlock = $('.specialty');
+            var dynamicBlock = $('#dynamic');
+            choiceBlock.click(function (e) {
+                pageName = $(this).parent().attr('id');
+                $.ajax({
+                    type: "GET",
+                    url: '/LoadPage.php',
+                    data: {pageName: pageName},
+                    dataType: "html",
+                    success: function (result) {
+                        dynamicBlock.hide();
+                        specialtyBlock.empty().append(result);
+                        if (specialtyBlock.is(':hidden')) {
+                            specialtyBlock.fadeIn('slow');
                         }
+                    },
+                    error: function () {
+                        alert('Произошла ошибка при загрузки данных')
                     }
-                }
-            });
 
-            selectBottom.click(function (e) {
-                e.preventDefault();
-                /*
-                var bottomCount =  selectBottom.length;
-                var step = $(this).attr('id');
-                for(var i = 0; bottomCount > i;i++)
-                {
-                    if($(selectBottom[i]).attr('id') == step)
-                    {
-                        $(select[i]).addClass("active");
-                        $(selectBottom [i]).addClass("active");
-                        showHideBlock(step);
-                    }else
-                    {
-                        if($(selectBottom[i]).hasClass("active"))
-                        {
-                            $(select[i]).removeClass("active");
-                            $(selectBottom[i]).removeClass("active");
-                        }
-                    }
-                }
-                 */
-            })
-
-        }
-        function showHideBlock(e) {
-            var select = $('.step-block-content > div');
-            var count = select.length;
-            for(var i = 0 ;count > i ; i++)
-            {
-                if($(select[i]).attr('class') == e)
-                {
-                    $(select[i]).fadeIn('slow')
-                }else
-                {
-                    $(select[i]).fadeOut()
-                }
-            }
-        }
-
-        // Функции отображения  модельного окна вопросов
-        clickQuestionBottoms();
-        function clickQuestionBottoms() {
-            $('.question').click(function () {
-                // Получаем id по которому будем искать нужный div блок и отоброжать его
-                var Class = $(this).children('.question-number').attr('id');
-                showHideQuestions(Class);
-                var el = $('#examples-of-questions');
-                if (el.length) {
-                    $.magnificPopup.open({
-                        items: {
-                            src: el
-                        },
-                        type: 'inline',
-                        showCloseBtn: false
-                    });
-                }
-            });
-            $('#white-popup-close').click(function () {
-                $.magnificPopup.close();
+                });
             })
         }
+        //Выбрать специальность
+        choiceSpecialty();
+        function choiceSpecialty() {
+            var pageName = false;
+            var dynamicBlock = $('#dynamic');
+            $(document).on('click','.specialty-block',function () {
+                pageName = $(this).parent().attr('id');
+                $.ajax({
+                    type: "GET",
+                    url: '/LoadPage.php',
+                    data: {pageName: pageName},
+                    dataType: "html",
+                    success: function (result) {
+                        dynamicBlock.empty().append(result);
+                        if (dynamicBlock.is(':hidden')) {
+                            dynamicBlock.fadeIn('slow');
+                        }
+                    },
+                    error: function () {
+                        alert('Произошла ошибка при загрузки данных')
+                    }
 
-        // Функции отображения  блоков с вопросами
-        function showHideQuestions(name) {
-            //Имя класса который нужно отобразить
-            var className = name;
-            //подсчитывае все блоки чтобы пройтись циклом и скрыть не нужные
-            var allBlock = $('.answer-block > div');
-            var countBlock = allBlock.length;
-            for(var i = 0 ; countBlock > i ; i++)
-            {
-                //Эказатель на текущем элементе
-                var currentClass = allBlock[i];
-                //Имя текущего клаcса
-                var currentClassName = $(currentClass).attr('class');
-                if(currentClassName == className)
-                {
-                    //Если полученное имя совподает с классам текущего элемента то отображаем
-                    $(currentClass).show();
-                }else
-                {
-                    //Если име не совподает то скрываем элемент
-                    $(currentClass).hide()
-                }
-               console.log(allBlock[i])
-            }
+                });
+            })
         }
-
-
-        choiceAnimate();
-
-        function choiceAnimate() {
-
-            var choiseBlock = $('.choice');
-            var choiseBlockCordinate = choiseBlock.offset().top;
-            var animateBlock = $('.choice-animate-block > div');
-            $(window).on("scroll", function() {
-                if($(window).scrollTop() >= choiseBlockCordinate)
-                {
-                    $.each(animateBlock, function(i, div) {
-                        setTimeout(function() {
-                            $(div).addClass("swing animated");
-                        }, 2000 + (i * 3500));
-
-                    });
-                }
-            });
-        }
-
-
-
-
-
-
-
-
-
-        
-
-
     })
 })();

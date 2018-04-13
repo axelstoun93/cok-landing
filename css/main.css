@@ -147,6 +147,7 @@ header .header-body img
     padding: 20px 0;
     color:#fff;
 }
+
 .specialty-block:hover
 {
     background: #12638a;
@@ -167,6 +168,15 @@ header .header-body img
 {
     width: auto;
     max-height: 100px;
+}
+.specialty .disable
+{
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+.specialty .disable:hover
+{
+    cursor: not-allowed;
 }
 /*specialty*/
 /*text block*/
@@ -316,7 +326,7 @@ header .header-body img
 .step-content ol
 {
     text-align: left;
-    max-width: 760px;
+    max-width: 900px;
     margin: auto;
     padding: 15px 0;
 }
@@ -584,7 +594,8 @@ footer
     text-decoration: none;
 }
 .footer-copyright .social-icons li a:hover {
-   background: #025282;
+    background: #025282;
+    background: linear-gradient(to top, #025282, #75ecc4);
     color: #fff;
 }
 
