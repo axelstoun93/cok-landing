@@ -267,7 +267,7 @@
             </div>
         </div>
 
-        <div id="reviewsIndicators" class="carousel slide reviews" data-ride="carousel" data-interval="8000">
+        <div id="comment-carousel" class="carousel slide reviews" data-ride="carousel" data-interval="8000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="comment-content">
@@ -304,12 +304,33 @@
                     </div>
                 </div>
             </div>
+            <a class="left carousel-control" href="#comment-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#comment-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
             <!-- Controller -->
             <ol class="carousel-indicators" id="reviews-controller"></ol>
         </div>
 
     </div>
 </div>
-<script src="../js/dinamic.js"></script>
 <!-- Video -->
 <script src="../js/video.js"></script>
+<!-- main js -->
+<script src="../js/dinamic.js"></script>
+<script src="../js/jquery.mobile.custom.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#comment-carousel").swiperight(function() {
+            $(this).carousel('prev');
+        });
+        $("#comment-carousel").swipeleft(function() {
+            $(this).carousel('next');
+        });
+
+    });
+
+</script>
+
