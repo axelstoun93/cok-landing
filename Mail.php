@@ -56,7 +56,6 @@ class mail
                 <b>Телефон: </b> {$this->data->phone}<br>
                 <b>Сообщение: </b> {$this->data->messages}<br>
             ";
-            $this->mail->send();
             if($res = $this->mail->send())
             {
                 return json_encode(['status'=> $res,'messages' => 'Вы успешно отправили форму' , 'class' =>'alert-success' ]);
@@ -83,7 +82,6 @@ class mail
                 <b>E-mail: </b> {$this->data->email}<br>
                 <b>Телефон: </b> {$this->data->phone}<br>
             ";
-            $this->mail->send();
             if($res = $this->mail->send())
             {
                 return json_encode(['status'=> $res,'messages' => 'Вы успешно отправили форму, мы свяжемся с вами в ближайшее время.', 'class' =>'alert-success' ]);
