@@ -57,12 +57,12 @@ class mail
                 <b>Сообщение: </b> {$this->data->messages}<br>
             ";
             $this->mail->send();
-            if($this->mail->send())
+            if($res = $this->mail->send())
             {
-                return json_encode(['status'=> $this->mail->send(),'messages' => 'Вы успешно отправили форму' , 'class' =>'alert-success' ]);
+                return json_encode(['status'=> $res,'messages' => 'Вы успешно отправили форму' , 'class' =>'alert-success' ]);
             }else
             {
-                return json_encode(['status'=> $this->mail->send(), 'messages' => 'Произошла ошибка при отправки данных!' , 'class' =>'alert-danger' ]);
+                return json_encode(['status'=> $res, 'messages' => 'Произошла ошибка при отправки данных!' , 'class' =>'alert-danger' ]);
             }
         }else
         {
@@ -84,12 +84,12 @@ class mail
                 <b>Телефон: </b> {$this->data->phone}<br>
             ";
             $this->mail->send();
-            if($this->mail->send())
+            if($res = $this->mail->send())
             {
-                return json_encode(['status'=> $this->mail->send() ,'messages' => 'Вы успешно отправили форму, мы свяжемся с вами в ближайшее время.', 'class' =>'alert-success' ]);
+                return json_encode(['status'=> $res,'messages' => 'Вы успешно отправили форму, мы свяжемся с вами в ближайшее время.', 'class' =>'alert-success' ]);
             }else
             {
-                return json_encode(['status'=> $this->mail->send() , 'messages' => 'Произошла ошибка при отправки данных!', 'class' =>'alert-danger' ]);
+                return json_encode(['status'=> $res, 'messages' => 'Произошла ошибка при отправки данных!', 'class' =>'alert-danger' ]);
             }
 
         }else
@@ -111,5 +111,6 @@ if(!empty($_GET['method'] && !empty($_POST)))
     $mail = new Mail($_POST);
     $method = $_GET['method'];
     echo $mail->$method();
+    unset($_POST);
 }
 
