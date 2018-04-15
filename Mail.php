@@ -57,10 +57,16 @@ class mail
                 <b>Сообщение: </b> {$this->data->messages}<br>
             ";
             $this->mail->send();
-            return true;
+            if($this->mail->send())
+            {
+                return json_encode(['status'=> $this->mail->send(),'messages' => 'Вы успешно отправили форму' , 'class' =>'alert-success' ]);
+            }else
+            {
+                return json_encode(['status'=> $this->mail->send(), 'messages' => 'Произошла ошибка при отправки данных!' , 'class' =>'alert-danger' ]);
+            }
         }else
         {
-            return false;
+            return json_encode(['status'=> false, 'messages' => 'Произошла ошибка при отправки данных!' , 'class' =>'alert-danger' ]);
         }
     }
     function callBack()
@@ -78,10 +84,17 @@ class mail
                 <b>Телефон: </b> {$this->data->phone}<br>
             ";
             $this->mail->send();
-            return true;
+            if($this->mail->send())
+            {
+                return json_encode(['status'=> $this->mail->send() ,'messages' => 'Вы успешно отправили форму, мы свяжемся с вами в ближайшее время.', 'class' =>'alert-success' ]);
+            }else
+            {
+                return json_encode(['status'=> $this->mail->send() , 'messages' => 'Произошла ошибка при отправки данных!', 'class' =>'alert-danger' ]);
+            }
+
         }else
         {
-            return false;
+            return json_encode(['status'=> false , 'messages' => 'Произошла ошибка при отправки данных!', 'class' =>'alert-danger' ]);
         }
     }
     function __call($name, $arguments)
@@ -97,6 +110,6 @@ if(!empty($_GET['method'] && !empty($_POST)))
 {
     $mail = new Mail($_POST);
     $method = $_GET['method'];
-    $mail->$method();
+    echo $mail->$method();
 }
 

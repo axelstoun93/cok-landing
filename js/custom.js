@@ -70,16 +70,63 @@
                 }
             })
         }
-        
-        
+
+
+
         sendForm();
-        //Функция отправки данных с форм
         function sendForm() {
-            $('.send-form').submit(function( event ) {
-                alert( "Handler for .submit() called." );
+            $('.call-back-form').submit(function( event ) {
                 event.preventDefault();
+                var form = $(this);
+                var dataForm = form.serializeArray();
+                var sendUrl  = form.attr('action');
+                var notificationBlock =  $('#notification-modal');
+                var notificationContent =  $('.notification-block');
+                $('#notification-popup-close').click(function () {
+                    $.magnificPopup.close();
+                });
+                $.magnificPopup.close();
+                $.ajax({
+                    type: "POST",
+                    url: sendUrl,
+                    data: dataForm,
+                    dataType: "json",
+                    success: function (result) {
+                        if(result.status)
+                        {
+                            $.magnificPopup.open({
+                                items: {
+                                    src: notificationBlock
+                                },
+                                type: 'inline',
+                                showCloseBtn: false,
+                                callbacks: {
+                                    open: function() {
+                                        $( ".alert" ).remove();
+                                        notificationContent.append('<div class="alert '+result.class+'" role="alert">'+ result.messages+'</div>');
+                                        form.trigger('reset');
+                                    }
+                                }
+                            });
+                        }else
+                        {
+                            $( ".alert" ).remove();
+                            notificationContent.append('<div class="alert '+result.class+'" role="alert">'+ result.messages+'</div>');
+                            form.trigger('reset');
+                        }
+                    },
+                    error: function () {
+                        alert('Произошла ошибка при отправки данных')
+                    }
+                });
             });
         }
+
+
+
+
     })
+
+
     
 })();

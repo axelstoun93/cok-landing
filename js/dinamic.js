@@ -100,7 +100,6 @@
 
 // Функции отображения  модельного окна вопросов
         clickQuestionBottoms();
-
         function clickQuestionBottoms() {
             $('.question').click(function () {
                 // Получаем id по которому будем искать нужный div блок и отоброжать его
@@ -195,6 +194,78 @@
                 
 
 
+        }
+
+
+
+        confirmQualificationBottom();
+        function confirmQualificationBottom() {
+            $('.btn-send').click(function (event) {
+                event.preventDefault();
+                var modelBlock = $('#call-back');
+                $.magnificPopup.open({
+                    items: {
+                        src: modelBlock
+                    },
+                    type: 'inline',
+                    showCloseBtn: false,
+                });
+            });
+            $('#call-back-close').click(function () {
+                $.magnificPopup.close();
+            })
+        }
+
+
+
+        sendDinamicForm();
+        //Функция отправки данных с форм
+        function sendDinamicForm() {
+            $('.send-form').submit(function( event ) {
+                event.preventDefault();
+                var form = $(this);
+                var dataForm = form.serializeArray();
+                var sendUrl  = form.attr('action');
+                var notificationBlock =  $('#notification-modal');
+                var notificationContent =  $('.notification-block');
+                $('#notification-popup-close').click(function () {
+                    $.magnificPopup.close();
+                });
+                $.magnificPopup.close();
+                 $.ajax({
+                 type: "POST",
+                 url: sendUrl,
+                 data: dataForm,
+                 dataType: "json",
+                 success: function (result) {
+                 if(result.status)
+                 {
+                     $.magnificPopup.open({
+                     items: {
+                     src: notificationBlock
+                     },
+                     type: 'inline',
+                     showCloseBtn: false,
+                     callbacks: {
+                     open: function() {
+                         $( ".alert" ).remove();
+                         notificationContent.append('<div class="alert '+result.class+'" role="alert">'+ result.messages+'</div>');
+                         form.trigger('reset');
+                     }
+                     }
+                     });
+                 }else
+                 {
+                     $( ".alert" ).remove();
+                     notificationContent.append('<div class="alert '+result.class+'" role="alert">'+ result.messages+'</div>');
+                     form.trigger('reset');
+                 }
+                 },
+                 error: function () {
+                 alert('Произошла ошибка при отправки данных')
+                 }
+                 });
+            });
         }
     })
 })();

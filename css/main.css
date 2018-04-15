@@ -326,7 +326,7 @@ header .header-body img
 .step-content ol
 {
     text-align: left;
-    max-width: 900px;
+    max-width: 700px;
     margin: auto;
     padding: 15px 0;
 }
@@ -337,6 +337,11 @@ header .header-body img
 .step-content .video
 {
     text-align: left;
+}
+.step-content .video-block
+{
+    min-height: 120px;
+    width: auto;
 }
 .step-content .video video
 {
