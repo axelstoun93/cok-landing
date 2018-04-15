@@ -1,0 +1,19 @@
+.question-answer .correct-answer
+{
+  border: 1px solid red;
+  border-radius: 30px;
+}
+.question-answer-two span
+{
+    text-decoration:underline;
+}
+.question-answer-three img
+{
+    max-width: 100%;
+    height: auto;
+}
+.question-answer-four img
+{
+    max-width: 100%;
+    height: auto;
+}

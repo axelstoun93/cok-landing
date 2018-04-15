@@ -113,7 +113,12 @@
                             src: el
                         },
                         type: 'inline',
-                        showCloseBtn: false
+                        showCloseBtn: false,
+                        callbacks: {
+                            open: function() {
+                                    animateQuestions(Class)
+                            }
+                        }
                     });
                 }
             });
@@ -141,8 +146,56 @@
                     //Если име не совподает то скрываем элемент
                     $(currentClass).hide()
                 }
-                console.log(allBlock[i])
             }
+        }
+        function animateQuestions(name) {
+
+            switch(name) 
+            {
+                case 'question-1':
+                    questionOne();
+                    break;
+                /*
+                case 'question-2':
+                    questionTwo();
+                    break;
+                */
+            }
+            
+            function questionOne()
+            {
+                var correctAnswer = $('.question-answer > p')[1];
+                setTimeout(function () {
+                    if(!$(correctAnswer).hasClass('correct-answer'))
+                    {
+                        $(correctAnswer).addClass('correct-answer');
+                    }
+                },1000);
+            }
+            function questionTwo()
+            {
+                var spanWords = $('.question-answer-two  span');
+                var duration = 2000;
+                var word = ['с','л','о','в','о'];
+                setTimeout(function () {
+                    $(spanWords).empty();
+                    $(word).each(function (index) {
+                        $(spanWords).delay(duration * index).append(word[index]);
+                });
+            },2000);
+            }
+            function questionThree()
+            {
+
+            }
+            function questionFour()
+            {
+
+            }
+                
+
+
         }
     })
 })();
+

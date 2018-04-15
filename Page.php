@@ -1,5 +1,5 @@
 <?php
-class Page
+class page
 {
     private  $dirPages = __DIR__.'/pages';
 

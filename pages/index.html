@@ -29,6 +29,7 @@
     <!-- main -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/answer.css">
     <!-- js -->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap.js"></script>
@@ -398,19 +399,19 @@
                             <div class="col-12 col-sm-6 col-md-3 padding">
                                 <div class="question">
                                     <div class="question-number" id="question-2">2</div>
-                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                    <div class="question-text"><p>Вставьте пропущенное слово</p></div>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3 padding">
                                 <div class="question">
                                     <div class="question-number" id="question-3">3</div>
-                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                    <div class="question-text"><p>Установите <br>соответствие</p></div>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3 padding">
                                 <div class="question">
                                     <div class="question-number" id="question-4">4</div>
-                                    <div class="question-text"><p>Выбрать один вариант ответа</p></div>
+                                    <div class="question-text"><p>Установите правильную последовательность</p></div>
                                 </div>
                             </div>
                         </div>
@@ -584,7 +585,7 @@
                         <h2 class="btn-title">Задать вопрос</h2>
                     </div>
                 </div>
-                <form action="/" class="question-form">
+                <form action="/mail?method=askQuestion" method="post" class="send-form question-form">
                     <div class="form-group">
                         <input type="text" class="form-control" id="name" placeholder="ФИО:" name="name" required>
                     </div>
@@ -629,7 +630,7 @@
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title" id="defaultModalLabel">Форма обратной связи</h4>
-                    <form action="/" class="modal-form">
+                    <form action="/mail?method=callBack" class="send-form modal-form" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="ФИО:" name="name" required>
                         </div>
@@ -656,7 +657,7 @@
                     <h4 class="modal-title">Выберите один вариант ответа</h4>
                     <hr>
                     <p>Здесь будет вопрос. Тебе нужно выбрать только ОДИН вариант ответа.</p>
-                    <div class="answer">
+                    <div class="question-answer">
                         <p>Ответ 1</p>
                         <p>Ответ 2</p>
                         <p>Ответ 3</p>
@@ -664,14 +665,42 @@
                     </div>
                 </div>
                 <div class="question-2" style="display: none">
-                    <h4 class="modal-title">Форма обратной связи</h4>
+                    <h4 class="modal-title">Вставьте пропущенное слово</h4>
+                    <hr>
+                    <div class="question-answer-two">
+                    <p>Здесь будет текст, в котором необходимо вставить пропущенное <span>слово</span>, подходящее по смысловой нагрузке</p>
+                    </div>
                 </div>
-                <div class="question-3" style="display: none">
-                    <h4 class="modal-title">Форма обратной связи</h4>
+                <div class="question-3"  style="display: none">
+                    <h4 class="modal-title">Установите соответствие</h4>
+                    <hr>
+                    <div class="question-answer-three">
+                        <p>Здесь будут две колонки. Тебе необходимо установить соответствие между ними. У  одного элемента  может быть только одно соответствие.</p>
+                        <img src="../images/conformity.png">
+                    </div>
                 </div>
                 <div class="question-4" style="display: none">
-                    <h4 class="modal-title">Форма обратной связи</h4>
+                    <h4 class="modal-title">Установите правильную последовательность</h4>
+                    <hr>
+                    <div class="question-answer-four">
+                        <p>Тебе будут даны варианты ответов в неправильной последовательности. Твоя задача распределить их в верной последовательности.</p>
+                        <img src="../images/sequence.png">
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="notification-modal" class="white-popup mfp-hide">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" id="notification-popup-close" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body notification-block">
+
             </div>
         </div>
     </div>

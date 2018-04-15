@@ -1,6 +1,6 @@
 <?php
 include_once 'page.php';
 //Создаем страницу
-$page = new Page();
+$page = new page();
 //Отображаем страницу
 $page->index();

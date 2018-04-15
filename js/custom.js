@@ -26,7 +26,7 @@
                 pageName = $(this).parent().attr('id');
                 $.ajax({
                     type: "GET",
-                    url: '/LoadPage.php',
+                    url: '/loadPage',
                     data: {pageName: pageName},
                     dataType: "html",
                     success: function (result) {
@@ -50,11 +50,12 @@
             var dynamicBlock = $('#dynamic');
             $(document).on('click','.specialty-block',function () {
                 pageName = $(this).parent().attr('id');
+                if(pageName == 'hairdresser' || pageName == 'hairdresser-employer'){
                 $.ajax({
                     type: "GET",
-                    url: '/LoadPage.php',
+                    url: '/loadPage',
                     data: {pageName: pageName},
-                    dataType: "html",
+                    dataType: "HTML",
                     success: function (result) {
                         dynamicBlock.empty().append(result);
                         if (dynamicBlock.is(':hidden')) {
@@ -66,7 +67,19 @@
                     }
 
                 });
+                }
             })
         }
+        
+        
+        sendForm();
+        //Функция отправки данных с форм
+        function sendForm() {
+            $('.send-form').submit(function( event ) {
+                alert( "Handler for .submit() called." );
+                event.preventDefault();
+            });
+        }
     })
+    
 })();
