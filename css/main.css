@@ -397,11 +397,13 @@ header .header-body img
 .certificate
 {
     text-align: center;
+    width:100%;
     padding: 20px 0;
 }
 .certificate img
 {
     max-width: 320px;
+    width: 100%;
     height: auto;
 }
 .registry-form

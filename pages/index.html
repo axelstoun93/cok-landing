@@ -64,7 +64,7 @@
           <div class="row choice-animate-block">
               <!-- Single Special Area -->
               <div class="col-xs-12  col-sm-6  col-md-4 offset-md-2" id="specialty_specialists">
-                  <div class="choice-block text-center">
+                  <div class="choice-block text-center" onclick="void(0)">
                       <h4>Для специалистов</h4>
                       <div class="single-icon">
                           <img src="../images/icons/specialist.png">
@@ -74,7 +74,7 @@
               </div>
               <!-- Single Special Area -->
               <div class="col-xs-12 col-sm-6 col-md-4" id="specialty_employer">
-                  <div class="choice-block text-center">
+                  <div class="choice-block text-center"  onclick="void(0)">
                       <h4>Для работодателей</h4>
                       <div class="single-icon">
                           <img src="../images/icons/employer.png">
@@ -97,7 +97,7 @@
         </div>
         <div class="row">
             <div class="specialty-col specialty-padding" id="hairdresser">
-                <div class="specialty-block text-center">
+                <div class="specialty-block text-center" onclick="void(0)">
                     <div class="specialty-icon">
                         <img src="images/icons/hairdresser.png">
                     </div>
@@ -402,13 +402,13 @@
                 </div>
                 <form action="/mail?method=askQuestion" method="post" class="call-back-form question-form">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" placeholder="ФИО:" name="name" required>
+                        <input type="text" class="form-control" id="name" placeholder="ФИО:" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Ваш E-mail:" name="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Ваш E-mail:" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="pwd" placeholder="Телефон:" name="phone">
+                        <input type="tel" class="form-control" id="pwd" placeholder="Телефон:" name="phone" autocomplete="tel-national">
                     </div>
                     <div class="form-group">
                         <textarea class="form-control" name="messages" placeholder="Сообщение:" rows="6"></textarea>
@@ -448,13 +448,13 @@
                 <h4 class="modal-title" >Форма обратной связи</h4>
                 <form action="/mail?method=callBack" class="send-form modal-form" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="ФИО:" name="name" required>
+                        <input type="text" class="form-control" placeholder="ФИО:" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Ваш E-mail:" name="email" required>
+                        <input type="email" class="form-control" placeholder="Ваш E-mail:" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" placeholder="Телефон:" name="phone">
+                        <input type="tel" class="form-control" placeholder="Телефон:" autocomplete="tel-national" name="phone">
                     </div>
                     <button type="submit" class="btn-submit">Отправить</button>
                 </form>

@@ -35,6 +35,7 @@
                         if (specialtyBlock.is(':hidden')) {
                             specialtyBlock.fadeIn('slow');
                         }
+                        scrollTo(specialtyBlock);
                     },
                     error: function () {
                         alert('Произошла ошибка при загрузки данных')
@@ -61,6 +62,7 @@
                         if (dynamicBlock.is(':hidden')) {
                             dynamicBlock.fadeIn('slow');
                         }
+                        scrollTo(dynamicBlock);
                     },
                     error: function () {
                         alert('Произошла ошибка при загрузки данных')
@@ -121,8 +123,13 @@
                 });
             });
         }
+//функция автоскролинга до элемента
+function scrollTo(elem) {
+    $('html, body').animate({
+        scrollTop: elem.offset().top
+    }, 1000);
 
-
+}
 
 
     })
